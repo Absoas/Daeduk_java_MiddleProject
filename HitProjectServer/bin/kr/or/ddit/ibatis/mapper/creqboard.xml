@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+         PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+         "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="creq">
+   <select id= "selectCReqBoard" resultClass="creqBoardVO">
+   		select c.cor_regno, d.cor_name, d.cor_tel, a.app_no, b.creq_salary, b.creq_career, b.creq_no, b.creq_content, b.creq_startdate, b.creq_enddate,b.test_type,b.test_name
+	    from applycor a, correqboard b, corpmember c, corperation d
+	    where a.app_no = b.app_no
+	      and a.cor_id = c.cor_id
+	      and c.cor_regno = d.cor_no
+	      and c.cor_state = 'T'
+   </select>
+
+   <insert id="insertCreqBoard" parameterClass="creqBoardVO">
+   		insert into correqboard 
+   		values(
+   			CORREQBOARD_SEQ.nextval,
+   			#creq_content#,
+   			#creq_startdate#,
+   			#creq_enddate#,
+   			#creq_salary#,
+   			#creq_career#,
+   			applycor_seq.nextval,
+   			0,
+   			#test_type#,
+   			#test_name#
+   		)
+   		
+   </insert>
+   
+  
+   
+   <update id="updateCreqBoard" parameterClass="creqBoardVO">
+
+   </update>
+   
+   <delete id="deleteCreqBoard" parameterClass="String">
+   		
+   </delete>
+   
+   <delete id="insertApplyBoard" parameterClass="String">
+   		insert into applycor
+   		values(
+   			applycor_seq.currval,
+   			#data#
+   		)
+   </delete>
+   <select id = "selectCreqBoardInfo" parameterClass="String" resultClass="creqBoardVO">
+   		select c.cor_regno,
+   		 d.cor_name, 
+   		 d.cor_tel, 
+   		 a.app_no, 
+   		 b.test_type,
+   		 b.test_name,
+   		 b.creq_salary,
+   		  b.creq_career, 
+   		  b.creq_no, b.creq_content, 
+   		 to_char( b.creq_startdate,'yyyy-mm-dd') "creq_startdate" ,
+   		 to_char(b.creq_enddate,'yyyy-mm-dd')  "creq_enddate", 
+   		   b.creq_click
+	    from applycor a, correqboard b, corpmember c, corperation d
+	    where a.app_no = b.app_no
+	      and a.cor_id = c.cor_id
+	      and c.cor_regno = d.cor_no
+	      and c.cor_state = 'T'
+	      and d.cor_name = #cor_name#
+   </select>
+   
+   <select id = "selectCReqName" resultClass="String">
+   	select a.cor_name from corperation a, corpmember b where b.COR_REGNO = a.cor_no and b.cor_state = 'T'
+   </select>
+   
+   <select id = "selectCreqArea" resultClass="String" parameterClass="String">
+   	select  d.cor_name
+	    from applycor a, correqboard b, corpmember c, corperation d
+	    where a.app_no = b.app_no
+	      and a.cor_id = c.cor_id
+	      and c.cor_regno = d.cor_no
+	      and c.cor_state = 'T'
+          and d.cor_addr like '%'||#cor_addr#||'%'
+   </select>
+   
+   <select id="selectCreqCorName" parameterClass="String" resultClass="String">
+   	select  d.cor_name
+	    from applycor a, correqboard b, corpmember c, corperation d
+	    where a.app_no = b.app_no
+	      and a.cor_id = c.cor_id
+	      and c.cor_regno = d.cor_no
+	      and c.cor_state = 'T'
+          and d.cor_name like '%'||#cor_name#||'%'
+   </select>
+   
+   <select id = "selectCreqSal" parameterClass="String" resultClass="String">
+   	select  d.cor_name
+	    from applycor a, correqboard b, corpmember c, corperation d
+	    where a.app_no = b.app_no
+	      and a.cor_id = c.cor_id
+	      and c.cor_regno = d.cor_no
+	      and c.cor_state = 'T'
+          <![CDATA[and b.creq_salary >=]]> #creq_salary#
+   </select>
+   
+   <update id="updateCreqClick" parameterClass="creqBoardVO">
+   		update correqboard set creq_click = #creq_click# where CREQ_NO = #creq_no#
+   </update>
+   
+   <select id="setRanckView" resultClass="String">
+   		select a.cor_name  from corperation a, corpmember b , applycor c , correqboard d
+		where 
+		b.cor_regno = a.cor_no
+		and b.cor_id = c.cor_id
+		and c.app_no = d.app_no
+		<![CDATA[ AND ROWNUM < 11 ]]>
+		order by d.creq_click desc
+   </select>
+   
+</sqlMap>         
+
+
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="admin">
+	<select id="selectCalendar" resultClass="kr.or.ddit.admin.AdminCalendarVO">
+		    select c.cor_regno, 
+			d.cor_name, 
+			d.cor_tel, 
+			a.app_no, 
+			b.creq_salary, 
+			b.creq_career, 
+			b.creq_no, 
+			b.creq_content,
+			to_char(b.creq_startdate,'yyyy-mm-dd') "creq_startdate",
+			to_char(b.creq_enddate,'yyyy-mm-dd') "creq_enddate" 
+		    from applycor a, correqboard b, corpmember c, corperation d
+		    where a.app_no = b.app_no
+		      and a.cor_id = c.cor_id
+		      and c.cor_regno = d.cor_no
+		      and c.cor_state = 'T'
+	</select>
+	
+	<select id="detailCalendar" resultClass="kr.or.ddit.admin.AdminCalendarVO" parameterClass="String">
+		  select  
+    c.creq_salary,
+     c.creq_career,
+    c.creq_content,
+     d.cor_name,
+	 d.cor_tel,
+	 d.cor_addr
+	 from corpmember a, applycor b  , correqboard c , corperation d
+	where 
+	a.cor_id = b.cor_id
+    and a.cor_state = 'T'
+	and   b.app_no = c.app_no
+	and a.cor_regno = d.cor_no
+	and d.cor_name = #data#
+	</select>
+</sqlMap>			
+
+
+
+
+

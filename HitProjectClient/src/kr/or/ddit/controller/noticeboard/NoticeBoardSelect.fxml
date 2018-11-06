@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="429.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.noticeboard.NoticeBoardselectController">
+   <children>
+      <Text layoutX="40.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="제목" />
+      <TextField fx:id="selectBoard_title" layoutX="86.0" layoutY="58.0" prefHeight="29.0" prefWidth="453.0" />
+      <Text layoutX="40.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="내용" />
+      <TextArea fx:id="selectBoard_content" layoutX="86.0" layoutY="108.0" prefHeight="133.0" prefWidth="453.0" />
+      <Button fx:id="selectBoard_updbtn" layoutX="108.0" layoutY="373.0" mnemonicParsing="false" text="수정" />
+      <Button fx:id="selectBoard_delbtn" layoutX="265.0" layoutY="373.0" mnemonicParsing="false" text="삭제" />
+      <Button fx:id="selectBoard_canbtn" layoutX="419.0" layoutY="373.0" mnemonicParsing="false" text="취소" />
+      <Text layoutX="39.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" No" wrappingWidth="30.0" />
+      <TextField fx:id="selectBoard_no" layoutX="86.0" layoutY="14.0" />
+      <Text layoutX="39.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="날짜" />
+      <TextField fx:id="selectBoard_date" layoutX="86.0" layoutY="252.0" prefHeight="29.0" prefWidth="453.0" />
+      <Text layoutX="33.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="조회수" />
+      <TextField fx:id="selectBoard_lookup" layoutX="86.0" layoutY="293.0" />
+   </children>
+</AnchorPane>

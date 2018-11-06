@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1045.0" style="-fx-background-color: #D1E0EF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.cor.applyinfo.CanvasResultController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2faff" height="530.0" layoutX="23.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: #f2faff;" width="1000.0" />
+      <ImageView fx:id="canvasview" fitHeight="530.0" fitWidth="1000.0" layoutX="22.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXTextArea fx:id="testcontarea" layoutX="23.0" layoutY="573.0" prefHeight="108.0" prefWidth="718.0" />
+      <JFXButton onAction="#close" layoutX="939.0" layoutY="630.0" prefHeight="48.0" prefWidth="85.0" ripplerFill="WHITE" style="-fx-background-color: #3399ff;" text="닫  기" textFill="WHITE" />
+   </children>
+</AnchorPane>

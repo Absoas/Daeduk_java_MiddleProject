@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="158.0" style="-fx-background-color: #3f3f3f;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="118.0" fitWidth="123.0" layoutX="10.0" layoutY="11.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@job.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="7.0" layoutY="313.0" opacity="0.23" prefHeight="3.0" prefWidth="143.0" style="-fx-background-color: white;" />
+      <JFXButton accessibleText="btn1" fx:id="goNoticeBtn" buttonType="RAISED" layoutY="268.0" prefHeight="44.0" prefWidth="158.0" ripplerFill="WHITE" text="공지사항" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="7.0" layoutY="264.0" opacity="0.23" prefHeight="3.0" prefWidth="143.0" style="-fx-background-color: white;" />
+      <Separator layoutX="6.0" layoutY="168.0" opacity="0.23" prefHeight="3.0" prefWidth="143.0" style="-fx-background-color: white;" />
+      <JFXButton accessibleText="btn2" fx:id="goPassBoardBtn" buttonType="RAISED" layoutY="219.0" prefHeight="44.0" prefWidth="158.0" ripplerFill="WHITE" text="TIP) 합격자 자소서" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton accessibleText="btn3" fx:id="goReviewBtn" buttonType="RAISED" layoutY="171.0" prefHeight="44.0" prefWidth="158.0" ripplerFill="WHITE" text="후기 게시판" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="6.0" layoutY="216.0" opacity="0.23" prefHeight="3.0" prefWidth="143.0" style="-fx-background-color: white;" />
+      <JFXButton accessibleText="btn4" fx:id="goQnABtn" buttonType="RAISED" layoutY="317.0" prefHeight="44.0" prefWidth="158.0" ripplerFill="WHITE" text="Q &amp; A" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton  buttonType="RAISED" ellipsisString="" layoutY="95.0" prefHeight="46.0" prefWidth="158.0" ripplerFill="WHITE" text=" ">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@purelogo.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font>
+         <padding>
+            <Insets left="4.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="6.0" layoutY="362.0" opacity="0.23" prefHeight="3.0" prefWidth="143.0" style="-fx-background-color: white;" />
+      <JFXButton accessibleText="btn5" fx:id="goQuestionBtn" buttonType="RAISED" layoutX="-1.0" layoutY="366.0" prefHeight="44.0" prefWidth="158.0" ripplerFill="WHITE" text="FAQ" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="6.0" layoutY="411.0" opacity="0.23" prefHeight="3.0" prefWidth="143.0" style="-fx-background-color: white;" />
+      <JFXButton accessibleText="btn6" buttonType="RAISED" layoutY="414.0" prefHeight="44.0" prefWidth="158.0" ripplerFill="WHITE" text="기업 랭킹" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="6.0" layoutY="459.0" opacity="0.23" prefHeight="3.0" prefWidth="143.0" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>

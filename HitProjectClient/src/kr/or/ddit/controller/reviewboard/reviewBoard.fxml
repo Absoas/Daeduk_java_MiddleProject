@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.reviewboard.RevBoardController">
+   <children>
+      <Pagination fx:id="paging" layoutX="25.0" layoutY="16.0" prefHeight="483.0" prefWidth="864.0" />
+      <TableView fx:id="NoticeTableView" layoutX="28.0" layoutY="15.0" onMouseClicked="#clickTable" prefHeight="404.0" prefWidth="852.0" stylesheets="@../../css/passintrotableview.css">
+        <columns>
+          <TableColumn fx:id="BoardNo" prefWidth="70.0" text="No" />
+          <TableColumn fx:id="BoardTitle" prefWidth="198.0" text="제목" />
+            <TableColumn fx:id="BoardWriter" prefWidth="102.0" text="작성자" />
+            <TableColumn fx:id="BoardDate" prefWidth="304.0" text="날짜" />
+            <TableColumn fx:id="BoardViews" minWidth="0.0" prefWidth="176.0" text="조회수" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnClick" layoutX="818.0" layoutY="463.0" onAction="#insertBoard" style="-fx-background-color: #3399ff;" text="글쓰기" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

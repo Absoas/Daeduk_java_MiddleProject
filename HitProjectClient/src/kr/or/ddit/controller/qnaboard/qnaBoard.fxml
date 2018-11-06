@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="911.0" stylesheets="@../../css/passintrotableview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.qnaboard.QnaBoardController">
+   <children>
+      <Pagination fx:id="qnaPaging" layoutX="15.0" layoutY="11.0" prefHeight="489.0" prefWidth="883.0" />
+      <TableView fx:id="NoticeTableView" layoutX="19.0" layoutY="19.0" onMouseClicked="#clickTable" prefHeight="439.0" prefWidth="876.0">
+         <columns>
+            <TableColumn fx:id="BoardNo" prefWidth="43.0" text="No" />
+            <TableColumn fx:id="BoardTitle" prefWidth="430.0" text="제목" />
+            <TableColumn fx:id="BoardWriter" prefWidth="98.0" text="작성자" />
+            <TableColumn fx:id="BoardDate" prefWidth="157.0" text="날짜" />
+            <TableColumn fx:id="BoardViews" minWidth="0.0" prefWidth="147.0" text="조회수" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnClick" layoutX="845.0" layoutY="470.0" mnemonicParsing="false" onAction="#insertBoard" text="글쓰기" />
+   </children>
+</AnchorPane>

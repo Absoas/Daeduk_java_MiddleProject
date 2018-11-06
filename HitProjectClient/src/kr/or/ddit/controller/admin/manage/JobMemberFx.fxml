@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489" prefWidth="864" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.admin.manage.JobMemberController">
+   <children>
+      <Pagination fx:id="pagination" layoutX="70.0" layoutY="67.0" prefHeight="406.0" prefWidth="731.0" />
+      <TreeTableView fx:id="treeTableView" layoutX="85.0" layoutY="85.0" prefHeight="336.0" prefWidth="695.0" stylesheets="@../../../css/tableView.css">
+        <columns>
+          <TreeTableColumn fx:id="tr_mem_id" prefWidth="75.0" text="ID" />
+          <TreeTableColumn fx:id="tr_mem_pass" prefWidth="75.0" text="PASS" />
+            <TreeTableColumn fx:id="tr_mem_name" prefWidth="69.0" text="NAME" />
+            <TreeTableColumn fx:id="tr_mem_mail" prefWidth="154.0" text="MAIL" />
+            <TreeTableColumn fx:id="tr_mem_type" prefWidth="111.0" text="TYPE" />
+            <TreeTableColumn fx:id="tr_jmem_state" prefWidth="90.0" text="STATE" />
+            <TreeTableColumn fx:id="tr_jmem_zip" prefWidth="125.0" text="ZIP" />
+            <TreeTableColumn fx:id="tr_jmem_addr" prefWidth="125.0" text="ADDR" />
+            <TreeTableColumn fx:id="tr_jmem_regno" prefWidth="125.0" text="REGNO" />
+            <TreeTableColumn fx:id="tr_mem_image" prefWidth="125.0" text="IMAGE" />
+        </columns>
+      </TreeTableView>
+      <JFXComboBox fx:id="comboBox" layoutX="139.0" layoutY="29.0" prefHeight="23.0" prefWidth="175.0" />
+      <JFXTextField fx:id="textField" focusColor="#66a3ff" layoutX="343.0" layoutY="24.0" maxWidth="185.0" minWidth="185.0" prefHeight="29.0" prefWidth="185.0" />
+      <JFXButton fx:id="selBtn" layoutX="553.0" layoutY="28.0" prefHeight="29.0" prefWidth="75.0" style="-fx-background-color: #66a3ff;" text="검  색" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="delBtn" layoutX="650.0" layoutY="28.0" prefHeight="29.0" prefWidth="75.0" style="-fx-background-color: #ff6666;" text="삭  제" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

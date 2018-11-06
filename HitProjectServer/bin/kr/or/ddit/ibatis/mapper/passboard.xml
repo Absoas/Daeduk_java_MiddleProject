@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+         PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+         "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="passIntro">
+
+<update id="updatecount" parameterClass="passVO">
+   update passintro_board set pass_board_count=#pass_board_count# where pass_board_no=#pass_board_no#
+</update>
+
+<select id="selectpassboard"  resultClass="passVO">
+   select * from passintro_board
+</select>
+
+<delete id = "deletepassboard" parameterClass = "int">
+	delete from passintro_board where pass_board_no = #pass_board_no#
+</delete>
+
+<insert id="insertpassboard" parameterClass = "passVO">
+	insert into passintro_board (pass_board_no, pass_board_title, pass_board_writer, pass_board_count, pass_board_date, pass_board_contents)
+	values(pass_board_seq.nextval,#pass_board_title#,'관리자',0,sysdate,#pass_board_contents#)
+</insert>
+
+<update id = "updatepassboard" parameterClass = "passVO">
+	update passintro_board set pass_board_title = #pass_board_title#, pass_board_contents = #pass_board_contents# where pass_board_no = #pass_board_no#
+</update>
+
+
+</sqlMap>

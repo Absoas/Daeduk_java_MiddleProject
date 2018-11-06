@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Mylic">
+
+	<select id="selectMylic" parameterClass="String" resultClass="MylicVO">
+		select a.mem_id,b.* from mylicense a, license b where a.lic_code = b.lic_code and a.mem_id=#mem_id#  
+	</select>
+	
+	<insert id = "insertMylic" parameterClass = "MylicVO">
+		insert into mylicense(mem_id, lic_code) values (#mem_id#, #lic_code#)
+	</insert>
+	
+	<delete id = "deleteMylic" parameterClass = "MylicVO">
+		delete from mylicense where lic_code = #lic_code# and mem_id= #mem_id#
+	</delete>
+
+</sqlMap>

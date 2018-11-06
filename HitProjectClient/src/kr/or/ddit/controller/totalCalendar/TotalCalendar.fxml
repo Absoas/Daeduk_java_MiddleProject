@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.totalCalendar.TotalCalendarController">
+   <children>
+      <ImageView fitHeight="497.0" fitWidth="901.0" layoutX="9.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="246.0" layoutY="84.0" prefHeight="410.0" prefWidth="630.0" style="-fx-background-color: #FCFEF0;" stylesheets="@scrollPane.css">
+         <content>
+            <Pane fx:id="pane" prefHeight="605.0" prefWidth="606.0" style="-fx-background-color: #ffffff;" />
+         </content>
+      </ScrollPane>
+      <Text fx:id="calendarTitle" layoutX="33.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="176.12109375">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <JFXButton fx:id="nextBtn" layoutX="148.0" layoutY="151.0" prefHeight="55.0" prefWidth="56.0" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@nextBtn.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="previousBtn" layoutX="65.0" layoutY="151.0" prefHeight="55.0" prefWidth="56.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@preBtn.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+   </children>
+</AnchorPane>

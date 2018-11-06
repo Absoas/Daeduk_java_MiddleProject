@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.signup.CorRegnoController">
+   <children>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" ellipsisString="" layoutX="410.0" layoutY="25.0" prefHeight="33.0" prefWidth="30.0" ripplerFill="WHITE" style="-fx-background-color: #3399ff;" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="searchField" focusColor="#3399ff" labelFloat="true" layoutX="177.0" layoutY="29.0" maxWidth="225.0" minWidth="166.0" prefHeight="33.0" prefWidth="225.0" promptText="검색내용 입력" />
+      <JFXComboBox fx:id="comboSelect" layoutX="41.0" layoutY="34.0" prefHeight="23.0" prefWidth="128.0">
+         <effect>
+            <ColorAdjust brightness="0.28" />
+         </effect></JFXComboBox>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="299.0" layoutY="445.0" prefHeight="28.0" prefWidth="57.0" style="-fx-background-color: #3399ff;" text="취 소" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCheck" buttonType="RAISED" layoutX="150.0" layoutY="445.0" prefHeight="28.0" prefWidth="57.0" style="-fx-background-color: #3399ff;" text="확 인" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTreeTableView fx:id="corZipTable" layoutX="10.0" layoutY="77.0" prefHeight="352.0" prefWidth="460.0" stylesheets="@../../css/table.css">
+         <columns>
+            <TreeTableColumn fx:id="cor_no" prefWidth="97.0" text="사업자 등록번호" />
+            <TreeTableColumn fx:id="cor_name" prefWidth="68.0" text="이름" />
+            <TreeTableColumn fx:id="cor_tel" minWidth="0.0" prefWidth="82.0" text="사업자명" />
+            <TreeTableColumn fx:id="cor_post" minWidth="0.0" prefWidth="85.0" text="우편번호" />
+            <TreeTableColumn fx:id="cor_addr" minWidth="0.0" prefWidth="70.0" text="주소" />
+            <TreeTableColumn fx:id="cor_ceo" minWidth="0.0" prefWidth="55.0" text="전화번호" />
+         </columns>
+      </JFXTreeTableView>
+   </children>
+</AnchorPane>

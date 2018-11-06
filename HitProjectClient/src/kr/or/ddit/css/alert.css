@@ -1,0 +1,78 @@
+.header {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 25px;
+    -fx-padding: 10 10 10 10;
+    -fx-background-color: rgb(216, 222, 227);
+    -fx-background-insets: 0;
+    
+}
+
+.headContainer {
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);
+}
+
+#header-generic {
+    -mid-gray: rgb(216, 222, 227);
+    -fx-background-color: -mid-gray;
+}
+
+#header-info {
+    -fx-background-color: 
+        linear-gradient(to bottom, #A3D1FF 0%, #92C6FA 44%, #7BB7F3 100% );
+}
+
+#header-confirm {
+    -fx-background-color: 
+        linear-gradient(to bottom, #A3FFCE 0%, #92FAC3 44%, #7BF3B3 100% );
+}
+
+#header-error {
+    -fx-background-color: 
+        linear-gradient(to bottom, #FFA3A5 0%, #FA9294 44%, #F37B7D 100% );
+}
+
+#header-warning {
+    -fx-background-color: 
+        linear-gradient(to bottom, #FFD1A3 0%, #FAC692 44%, #F3B77B 100% );
+}
+
+#header-input-text {
+    -fx-background-color: 
+        linear-gradient(to bottom, #F9FFA3 0%, #F3FA92 44%, #EBF37B 100% );
+}
+
+#header-exception {
+    -fx-background-color: 
+        linear-gradient(to bottom, #E2A3FF 0%, #D992FA 44%, #CD7BF3 100% );
+}
+
+#exception-trace-label {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 12px;
+    -fx-padding: 0 10 10 10;
+}
+
+#exception-area {
+    
+}
+
+#bodyContainer {
+    -fx-padding: 5 10 10 10;
+}
+
+#details {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 14px;
+}
+
+#details-input-text {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 14px;
+    -fx-padding: 0 15 8 10;
+}
+
+#details-exception {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 14px;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.passintroboard.passboardshowController">
+   <children>
+      <Label layoutX="71.0" layoutY="47.0" text="제목:" />
+      <Label layoutX="71.0" layoutY="88.0" text="작성자:" />
+      <Label layoutX="71.0" layoutY="129.0" text="내용:" />
+      <JFXButton fx:id="update" layoutX="145.0" layoutY="363.0" onAction="#update" text="수정" />
+      <JFXButton fx:id="updateok" layoutX="206.0" layoutY="363.0" onAction="#updateok" text="수정완료" />
+      <JFXTextField fx:id="no" layoutX="508.0" layoutY="14.0" maxWidth="78.0" minWidth="78.0" prefHeight="29.0" prefWidth="78.0" />
+      <Label layoutX="477.0" layoutY="29.0" text="NO" />
+      <JFXTextField fx:id="title" layoutX="124.0" layoutY="40.0" maxWidth="254.0" minWidth="254.0" prefHeight="29.0" prefWidth="254.0" />
+      <JFXTextField fx:id="writer" layoutX="124.0" layoutY="81.0" maxWidth="146.0" minWidth="146.0" prefHeight="29.0" prefWidth="146.0" />
+      <JFXTextArea fx:id="contents" layoutX="60.0" layoutY="152.0" prefHeight="190.0" />
+      <JFXButton fx:id="ok" layoutX="296.0" layoutY="363.0" onAction="#okbutton" text="확인" />
+      <JFXButton fx:id="delete" layoutX="378.0" layoutY="363.0" onAction="#delete" text="삭제" />
+   </children>
+</AnchorPane>

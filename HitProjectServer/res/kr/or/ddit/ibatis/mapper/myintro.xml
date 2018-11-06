@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="myIntro">
+	 <select id="selectMyIntro" parameterClass="String" resultClass="myIntroVO">
+	 		select * from myintro where my_id = #my_id#
+	 </select>
+	 
+	 <insert id="insertMyIntro" parameterClass="myIntroVO">
+	 		insert into myintro values(myintro_seq.nextval,#my_id#,#my_career#,#my_hope#,#my_intro#)
+	 </insert>
+	 
+	 <update id="updateMyIntro" parameterClass="myIntroVO">
+	 		update myintro set my_career=#my_career#,my_hope=#my_hope#,my_intro=#my_intro# where my_id=#my_id#
+	 </update>	
+</sqlMap>			
+
+
+
+
+

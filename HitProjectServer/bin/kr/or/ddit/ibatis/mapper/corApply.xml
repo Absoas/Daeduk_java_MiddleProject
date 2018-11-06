@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+         PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+         "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="corApply">
+
+	<select id = "selectCorApplyInfo" parameterClass="String" resultClass="CorApplyVO">
+		select b.mem_name, d.TEST_NAME, c.test_no , c.res_state
+		from itmember b, jobapply c, test d
+		where c.cor_id = #cor_id#
+		and c.jmem_id = b.mem_id
+		and c.test_no = d.test_no
+	</select>
+	
+	<select id = "selectComboCorApply" parameterClass="CorApplyVO" resultClass="CorApplyVO">	
+		select b.mem_name, d.TEST_NAME, c.test_no , c.res_state
+		from itmember b, jobapply c, test d
+		where c.cor_id = #cor_id#
+		and c.jmem_id = b.mem_id
+		and c.test_no = d.test_no
+		and c.res_state = #res_state#
+	</select>
+	
+	<update id="updateComboCorApply" parameterClass="CorApplyVO">
+		UPDATE (SELECT b.mem_name,C.cor_id, D.test_name, C.test_no , C.res_state
+		from itmember b, jobapply c, test d
+		where c.jmem_id = b.mem_id
+		  AND D.test_no = C.test_no
+          ) e
+		SET E.res_state = #res_state#
+		WHERE E.mem_name = #mem_name#
+		AND E.cor_id = #cor_id#
+	</update>
+	
+	<select id="selectDetailList" resultClass="CorDetailVO">
+	select b.mem_name,g.JMEM_regno, g.JMEM_TEL,g.JMEM_ADDR,b.MEM_MAIL , f.my_career, f.my_hope,  f.my_intro
+		from itmember b, jobapply c, test d , myintro f , jobmember g
+		where c.jmem_id = b.mem_id
+		and c.test_no = d.test_no
+        and g.jmem_id = b.mem_id
+        and f.my_id = b.mem_id
+	</select>
+	
+</sqlMap>

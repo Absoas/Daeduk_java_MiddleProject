@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="FindID">
+
+<select id="memFindID" parameterClass="kr.or.ddit.jobmem.JobMemberVO" resultClass="String">
+	select a.mem_id from itmember a, jobmember b where a.mem_name = #mem_name# and b.jmem_regno = #jmem_regno#
+</select>
+
+<select id ="corFindID" parameterClass="kr.or.ddit.cormem.CorMemberVO" resultClass="String">
+select a.mem_id 
+  from itmember a, corperation b 
+ where a.mem_name = #mem_name# 
+   and b.cor_no = #cor_no#
+</select>
+</sqlMap>
+
+  

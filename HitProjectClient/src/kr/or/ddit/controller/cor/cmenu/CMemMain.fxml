@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="608.0" prefWidth="1100.0" style="-fx-background-color: #3f3f3f;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.cor.cmenu.CorMenuController">
+   <children>
+      <ImageView fitHeight="101.0" fitWidth="1102.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@header.gif" />
+         </image>
+      </ImageView>
+      <JFXDrawer fx:id="drawer3" defaultDrawerSize="300.0" direction="RIGHT" layoutX="879.0" layoutY="104.0" prefHeight="398.0" prefWidth="213.0" />
+      <Label layoutX="42.0" layoutY="10.0" prefHeight="20.0" prefWidth="179.0" text="  사람 IT 취업의 모든것" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ImageView fitHeight="36.0" fitWidth="41.0" layoutX="929.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@corpicon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="userName" layoutX="978.0" layoutY="12.0" prefHeight="15.0" prefWidth="106.0" text="(주)대덕인재개발원" textFill="WHITE" />
+      <JFXButton fx:id="myinfoBtn" buttonType="RAISED" layoutX="5.0" layoutY="39.0" opacity="0.8" prefHeight="33.0" prefWidth="79.0" ripplerFill="WHITE" text="마이페이지" textFill="WHITE" />
+      <JFXButton fx:id="applyCorBtn" buttonType="RAISED" layoutX="93.0" layoutY="38.0" opacity="0.8" prefHeight="33.0" prefWidth="92.0" ripplerFill="WHITE" text="구인기업 정보" textFill="WHITE" />
+      <JFXButton fx:id="applyJMemBtn" buttonType="RAISED" layoutX="192.0" layoutY="38.0" opacity="0.8" prefHeight="33.0" prefWidth="92.0" ripplerFill="WHITE" text="구직회원 정보" textFill="WHITE" />
+      <JFXButton fx:id="myBoardBtn" buttonType="RAISED" layoutX="387.0" layoutY="39.0" opacity="0.8" prefHeight="33.0" prefWidth="79.0" ripplerFill="WHITE" text="게시판" textFill="WHITE" />
+      <Separator layoutX="88.0" layoutY="44.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="0.0" />
+      <Separator layoutX="187.0" layoutY="44.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="0.0" />
+      <Separator layoutX="286.0" layoutY="44.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="0.0" />
+      <JFXButton buttonType="RAISED" layoutX="998.0" layoutY="44.0" onAction="#logOut" opacity="0.8" prefHeight="20.0" prefWidth="68.0" ripplerFill="#3399ff" style="-fx-border-color: white; -fx-border-radius: 10;" text="로그아웃" textFill="WHITE" />
+      <ImageView fitHeight="36.0" fitWidth="442.0" layoutX="6.0" layoutY="583.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@saramit.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="879.0" layoutY="591.0" opacity="0.51" text="\@ COPYRIGHTS BY SaramIT" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+    
+      <JFXButton fx:id="TotalCalendar" buttonType="RAISED" layoutX="290.0" layoutY="39.0" opacity="0.8" prefHeight="33.0" prefWidth="92.0" ripplerFill="WHITE" text="공채 달력" textFill="WHITE" />
+      <Separator layoutX="383.0" layoutY="44.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="0.0" />
+      <Separator layoutX="467.0" layoutY="43.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="0.0" />
+      <AnchorPane fx:id="changePane" layoutX="173.0" layoutY="77.0" prefHeight="508.0" prefWidth="911.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="900.0" layoutX="5.0" layoutY="76.0" prefHeight="508.0" prefWidth="158.0" />
+      <JFXDrawer fx:id="drawer1" defaultDrawerSize="900.0" layoutX="2.0" layoutY="74.0" prefHeight="508.0" prefWidth="158.0" />
+      <JFXButton layoutX="7.0" layoutY="4.0" onAction="#goHome" text=" ">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="41.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

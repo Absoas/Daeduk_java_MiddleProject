@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+
+	<properties resource="kr/or/ddit/ibatis/config/SqlMapConfig.properties" />
+	
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="32" maxSessions="10"
+		maxTransactions="5" useStatementNamespaces="true" />
+
+	
+	<typeAlias alias="zipVO" type="kr.or.ddit.common.ZipVO"/>
+	<typeAlias alias="corMemberVO" type="kr.or.ddit.cormem.CorMemberVO"/>
+	<typeAlias alias="jobMemberVO" type="kr.or.ddit.jobmem.JobMemberVO"/>
+	<typeAlias alias="LicenseBoardVO" type="kr.or.ddit.licenseboard.LicenseBoardVO"/>
+	<typeAlias alias="NoticeBoardVO" type="kr.or.ddit.noticeboard.NoticeBoardVO"/>
+	<typeAlias alias="myIntroVO" type="kr.or.ddit.myintro.MyIntroVO"/>
+	<typeAlias alias="creqBoardVO" type="kr.or.ddit.creqboard.CReqBoardVO"/>
+	<typeAlias alias="MemoVO" type="kr.or.ddit.calendar.MemoCalendarVO"/>
+	<typeAlias alias="MyCalendarVO" type="kr.or.ddit.calendar.MyCalendarVO"/>
+	<typeAlias alias="MylicVO" type="kr.or.ddit.mylicense.MylicVO"/>
+	<typeAlias alias="passVO" type="kr.or.ddit.passIntroBoard.PassIntroboardVO"/>
+	<typeAlias alias="TestVO" type="kr.or.ddit.test.TestVO"/>
+	<typeAlias alias="RevVO" type="kr.or.ddit.revboard.RevBoardVO"/>
+   <typeAlias alias="QnaVO" type="kr.or.ddit.qnaboard.QnaBoardVO"/>
+
+   <typeAlias alias="ApplyVO" type="kr.or.ddit.myApply.MyApplyVO"/>
+
+   <typeAlias alias="CorApplyVO" type="kr.or.ddit.corApply.CorApplyVO"/>
+   <typeAlias alias="CorDetailVO" type="kr.or.ddit.corApply.CorDetailVO"/>
+
+	
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+		
+			<property name="JDBC.Driver" value="${driver}" />
+			<property name="JDBC.ConnectionURL" value="${url}" />
+			<property name="JDBC.Username" value="${username}" />
+			<property name="JDBC.Password" value="${password}" />
+		</dataSource>
+	</transactionManager>
+	
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/jobMember.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/corRegno.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/zip.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/corMember.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/admin.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/license.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/noticeboard.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/myintro.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/creqboard.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/calendar.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/jmemlist.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/mylic.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/passboard.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/test.xml"/>
+	<sqlMap resource="kr/or/ddit/ibatis/mapper/qnaBoard.xml"/>
+   <sqlMap resource="kr/or/ddit/ibatis/mapper/revBoard.xml"/>
+   <sqlMap resource="kr/or/ddit/ibatis/mapper/idFind.xml"/>
+
+   <sqlMap resource="kr/or/ddit/ibatis/mapper/myApply.xml"/>
+
+   <sqlMap resource="kr/or/ddit/ibatis/mapper/corApply.xml"/>
+   <sqlMap resource="kr/or/ddit/ibatis/mapper/pwFind.xml"/>
+
+</sqlMapConfig>
+
+
+
+
+
+

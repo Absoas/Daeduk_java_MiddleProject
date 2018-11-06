@@ -1,0 +1,29 @@
+.titled-pane {
+    -fx-text-fill: rgb(88, 91, 96);
+    -fx-font-weight : bold;
+    -fx-font-size : 1.15em;
+    -fx-padding : 0 0 0.5em 0;
+    
+}
+.titled-pane:focused {
+    -fx-color: -fx-base;
+    -fx-text-fill: white;
+}
+.titled-pane > .title {
+    -fx-text-fill: rgb(102,163,255);
+    -fx-font-weight: bold;
+}
+titled-pane > .title  > .label{
+    -fx-text-fill: rgb(102,163,255);
+    -fx-font-weight: bold;
+}
+.titled-pane:focused > .title {
+    -fx-color: rgb(150, 180, 224);
+    -fx-text-fill: white;
+}
+.titled-pane > .title:hover {
+    -fx-color: rgb(102,163,255);
+}
+.titled-pane > * > * > AnchorPane {
+    -fx-padding: 0px ;
+}

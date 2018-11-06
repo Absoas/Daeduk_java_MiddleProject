@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.jmem.mycalendar.JMemMyCalendarController">
+   <children>
+      <ImageView fitHeight="497.0" fitWidth="901.0" layoutX="9.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../totalCalendar/background.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="246.0" layoutY="84.0" prefHeight="410.0" prefWidth="630.0" style="-fx-background-color: #FCFEF0;" stylesheets="@../../totalCalendar/scrollPane.css">
+         <content>
+            <Pane fx:id="pane" prefHeight="653.0" prefWidth="606.0" style="-fx-background-color: #ffffff;" />
+         </content>
+      </ScrollPane>
+      <Text fx:id="calendarTitle" layoutX="43.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="183.12109375" />
+      <JFXButton fx:id="nextBtn" layoutX="135.0" layoutY="87.0" prefHeight="55.0" prefWidth="56.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../totalCalendar/nextBtn.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="previousBtn" layoutX="63.0" layoutY="87.0" prefHeight="55.0" prefWidth="56.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../totalCalendar/preBtn.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

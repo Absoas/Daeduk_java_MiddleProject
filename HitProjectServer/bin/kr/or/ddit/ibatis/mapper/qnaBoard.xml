@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="qnaboard"> 
+	<select id="selectAllBoard" resultClass="kr.or.ddit.qnaboard.QnaBoardVO">
+	 		select * from qnaboard
+	 		
+	</select>
+	
+	<insert id="insertBoard" parameterClass="QnaVO">
+		insert into qnaboard (
+ 			qna_board_no, qna_board_title, qna_board_writer, qna_board_contents, qna_board_date, qna_board_views
+ 		)
+		values(qna_board_no.nextval, #qna_board_title#, #qna_board_writer#, #qna_board_contents#, sysdate, 0)
+	</insert>
+	
+	<delete id="deleteBoard" parameterClass="Integer">
+	delete from qnaboard where qna_board_no = #qna_board_no#
+	</delete>
+	
+ 	<update id="updateBoard" parameterClass="QnaVO">
+ 		update qnaboard set qna_board_title = #qna_board_title#, qna_board_writer = #qna_board_writer#, qna_board_contents = #qna_board_contents# where qna_board_no = #qna_board_no#
+ 	</update>
+
+	<update id="clickBoard" parameterClass="QnaVO">
+	    update qnaboard set qna_board_views = #qna_board_views# where qna_board_no = #qna_board_no#
+    </update>
+	 
+</sqlMap>			
+
+
+
+
+

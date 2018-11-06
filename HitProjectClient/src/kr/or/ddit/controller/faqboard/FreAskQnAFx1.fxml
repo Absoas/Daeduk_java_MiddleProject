@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="parent1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="45.0" layoutY="58.0" prefHeight="15.0" prefWidth="47.0" text="Q.">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <JFXTextField fx:id="fre_q" focusColor="#ff6666" layoutX="83.0" layoutY="57.0" maxWidth="463.0" minWidth="463.0" prefHeight="29.0" prefWidth="463.0" style="-fx-background-color: #ffe5e5;" text="회원 탈퇴는 어떻게 하나요?">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextArea fx:id="fre_a" focusColor="#66a3ff" layoutX="83.0" layoutY="105.0" maxWidth="463.0" minWidth="463.0" prefHeight="267.0" prefWidth="463.0" style="-fx-background-color: #e5f2ff;" text="안녕하세요. &#10;사람IT 관리자입니다.&#10;&#10;사람IT는 회원 정보 수정이나 기업 정보 수정에는 따로 회원 탈퇴 기능이&#10;없습니다.&#10;&#10;저희는 관리자에게 회원이 직접 요청을 해 관리자가 직접 확인 후&#10;관리자 쪽에서 회원 탈퇴를 할 수 있습니다.&#10; &#10;회원 탈퇴를 하고 싶은 경우&#10;마이페이지의 회원 탈퇴 요청 버튼을 누르시면 됩니다.&#10;&#10;감사합니다 ^^*&#10; ">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></JFXTextArea>
+      <Label layoutX="45.0" layoutY="103.0" prefHeight="15.0" prefWidth="47.0" text="A.">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="24.0" text="자주 묻는 질문 Q&amp;A" textFill="#8a8a8a" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

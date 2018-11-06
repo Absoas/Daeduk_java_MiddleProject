@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.test.codinginsertController">
+   <children>
+      <Label fx:id="label2" layoutX="31.0" layoutY="146.0" text="문제이름:" />
+      <Label fx:id="label3" layoutX="53.0" layoutY="105.0" text="type:" />
+      <JFXTextField fx:id="testname" layoutX="99.0" layoutY="139.0" maxWidth="348.0" minWidth="324.0" prefHeight="29.0" prefWidth="348.0" />
+      <Label fx:id="label4" layoutX="31.0" layoutY="186.0" text="상세설명:" />
+      <JFXComboBox fx:id="combolist" layoutX="106.0" layoutY="98.0"  prefHeight="23.0" prefWidth="94.0" />
+      <JFXTextArea fx:id="testexp" layoutX="31.0" layoutY="209.0" maxWidth="502.0" minWidth="502.0" prefHeight="289.0" prefWidth="502.0" />
+      <JFXButton fx:id = "ok" layoutX="256.0" layoutY="512.0" onAction="#ok" text="확인" />
+   </children>
+</AnchorPane>

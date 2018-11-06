@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="508.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.noticeboard.NoticeBoardController">
+   <children>
+      <Pagination fx:id="noti_board_pagination" prefHeight="498.0" prefWidth="869.0" />
+      <TableView fx:id="notiboard_tableView" layoutX="13.0" layoutY="16.0" prefHeight="436.0" prefWidth="883.0" stylesheets="@../../css/passintrotableview.css">
+         <columns>
+            <TableColumn fx:id="noti_board_no" prefWidth="53.0" text="No" />
+            <TableColumn fx:id="noti_board_title" prefWidth="401.0" text="제목" />
+            <TableColumn fx:id="noti_board_date" minWidth="0.0" prefWidth="130.0" text="날짜" />
+            <TableColumn fx:id="noti_board_lookup" minWidth="0.0" prefWidth="140.0" text="조회수" />
+            <TableColumn fx:id="noti_board_writer" minWidth="0.0" prefWidth="158.0" text="작성자" />
+         </columns>
+      </TableView>
+      <Button fx:id="noti_board_insertbtn" layoutX="845.0" layoutY="465.0" mnemonicParsing="false" onAction="#select" text="글쓰기" />
+   </children>
+</AnchorPane>

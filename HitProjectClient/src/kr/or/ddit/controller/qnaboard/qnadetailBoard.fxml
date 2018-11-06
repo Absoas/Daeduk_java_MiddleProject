@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.qnaboard.QnaBoardDetailController">
+   <children>
+      <Label layoutX="144.0" layoutY="70.0" text="제목" />
+      <Label layoutX="141.0" layoutY="111.0" text="작성자" />
+      <Label layoutX="144.0" layoutY="151.0" text="내용" />
+      <TextField fx:id="insertTitle" layoutX="194.0" layoutY="66.0" />
+      <TextField fx:id="insertWriter" layoutX="194.0" layoutY="115.0" />
+      <TextArea fx:id="insertContents" layoutX="144.0" layoutY="166.0" prefHeight="201.0" prefWidth="378.0" />
+      <Text layoutX="378.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="날짜" />
+      <Text layoutX="378.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="조회수" />
+      <Text fx:id="txtDate" layoutX="458.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="txtViews" layoutX="458.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="383.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No" />
+      <Text fx:id="txtNo" layoutX="458.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Button fx:id="btnInsert" onAction="#insertNotice" layoutX="194.0" layoutY="367.0" mnemonicParsing="false" text="등록" />
+      <Button fx:id="btnUpdate" onAction="#updateNotice" layoutX="286.0" layoutY="367.0" mnemonicParsing="false" text="수정" />
+      <Button fx:id="btnDelete" onAction="#deleteNotice" layoutX="387.0" layoutY="367.0" mnemonicParsing="false" text="삭제" />
+   </children>
+</AnchorPane>

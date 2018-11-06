@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.jmem.myintro.JMemAddMyIntroController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d6d6d6" height="264.0" layoutX="118.0" layoutY="229.0" stroke="#d6d6d6" strokeType="INSIDE" style="-fx-stroke: #d6d6d6;" width="615.0" />
+      <JFXTextArea fx:id="introArea" focusColor="#3399ff" layoutX="128.0" layoutY="236.0" maxWidth="746.0" minWidth="409.0" prefHeight="247.0" prefWidth="594.0" style="-fx-background-color: white;" />
+      <JFXComboBox fx:id="hopeCombo" layoutX="121.0" layoutY="137.0" prefHeight="29.0" prefWidth="134.0" promptText="희망분야" />
+      <JFXTextField fx:id="hopeField" focusColor="#3399ff" labelFloat="true" layoutX="274.0" layoutY="136.0" maxWidth="439.0" minWidth="194.0" prefHeight="35.0" prefWidth="439.0" promptText="기타 선택시 입력" />
+      <JFXComboBox fx:id="careerCombo" layoutX="121.0" layoutY="66.0" prefHeight="29.0" prefWidth="134.0" promptText="경력선택" />
+      <JFXTextField fx:id="careerField" focusColor="#3399ff" labelFloat="true" layoutX="274.0" layoutY="65.0" maxWidth="439.0" minWidth="194.0" prefHeight="35.0" prefWidth="439.0" promptText="경력 존재시 입력" />
+      <Label fx:id="successlabel" layoutX="755.0" layoutY="147.0" prefHeight="20.0" prefWidth="89.0" textFill="#1eff00" />
+      <JFXButton layoutX="115.0" layoutY="202.0" prefHeight="23.0" prefWidth="89.0" ripplerFill="WHITE" style="-fx-background-color: #fefefe;" text="자기소개서">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="759.0" layoutY="213.0" onAction="#newIntro" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #3399ff;" text="작 성" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="759.0" layoutY="268.0" onAction="#editIntro" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #3399ff;" text="편 집" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="759.0" layoutY="100.0" onAction="#saveIntro" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #3399ff;" text="저 장" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

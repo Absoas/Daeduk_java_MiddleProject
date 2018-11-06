@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.jmemlist.JobMemBoardContController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffde6" height="155.0" layoutX="440.0" layoutY="54.0" stroke="BLACK" strokeType="INSIDE" width="122.0" />
+      <ImageView fx:id="jmem_profile" fitHeight="144.0" fitWidth="124.0" layoutX="443.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@yeohwanprofile.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="473.0" layoutY="22.0" prefHeight="15.0" prefWidth="47.0" text="CLICK" />
+      <JFXTextField fx:id="jmem_click" focusColor="RED" layoutX="521.0" layoutY="8.0" maxWidth="95.0" minWidth="62.0" prefHeight="29.0" prefWidth="62.0" />
+      <JFXTextArea fx:id="jmem_intro" layoutX="25.0" layoutY="219.0" prefHeight="144.0" prefWidth="551.0" />
+      <Label layoutX="28.0" layoutY="95.0" prefHeight="15.0" prefWidth="54.0" text="GENDER" />
+      <JFXTextField fx:id="jmem_gender" layoutX="85.0" layoutY="85.0" prefHeight="23.0" prefWidth="134.0" />
+      <Label layoutX="41.0" layoutY="166.0" prefHeight="15.0" prefWidth="40.0" text="ADDR" />
+      <JFXTextField fx:id="jmem_addr" layoutX="84.0" layoutY="156.0" prefHeight="23.0" prefWidth="322.0" />
+      <Label layoutX="229.0" layoutY="62.0" prefHeight="15.0" prefWidth="47.0" text="CAREER" />
+      <JFXTextField fx:id="jmem_career" layoutX="282.0" layoutY="51.0" prefHeight="23.0" prefWidth="134.0" />
+      <JFXTextField fx:id="jmem_hope" layoutX="283.0" layoutY="120.0" prefHeight="23.0" prefWidth="134.0" />
+      <Label layoutX="242.0" layoutY="131.0" prefHeight="15.0" prefWidth="34.0" text="HOPE" />
+      <Label layoutX="28.0" layoutY="196.0" prefHeight="15.0" prefWidth="62.0" text="CONTENT" />
+      <JFXTextField fx:id="jmem_tel" layoutX="87.0" layoutY="120.0" prefHeight="23.0" prefWidth="134.0" />
+      <Label layoutX="54.0" layoutY="129.0" prefHeight="15.0" prefWidth="24.0" text="TEL" />
+      <JFXTextField fx:id="jmem_name" layoutX="84.0" layoutY="51.0" prefHeight="23.0" prefWidth="134.0" />
+      <Label layoutX="41.0" layoutY="61.0" prefHeight="15.0" prefWidth="40.0" text="NAME" />
+      <Label layoutX="244.0" layoutY="97.0" prefHeight="15.0" prefWidth="34.0" text="MAIL" />
+      <JFXTextField fx:id="jmem_mail" layoutX="282.0" layoutY="86.0" prefHeight="23.0" prefWidth="134.0" />
+   </children>
+</AnchorPane>

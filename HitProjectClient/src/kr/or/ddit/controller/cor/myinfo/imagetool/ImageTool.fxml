@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.fxmisc.richtext.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchor" prefHeight="597.0" prefWidth="770.0" style="-fx-background-color: #b8b8b8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.cor.myinfo.imagetool.ImageToolController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="548.0" layoutX="21.0" layoutY="25.0" stroke="#f2f2f2" strokeType="INSIDE" width="499.0" />
+      <Separator layoutX="268.0" layoutY="25.0" orientation="VERTICAL" prefHeight="548.0" prefWidth="0.0" />
+      <Separator layoutX="21.0" layoutY="297.0" prefHeight="0.0" prefWidth="499.0" style="-fx-border-color: #f2f2f2;" />
+      <JFXButton buttonType="RAISED" layoutX="538.0" layoutY="93.0" prefHeight="48.0" prefWidth="129.0" ripplerFill="WHITE" style="-fx-background-color: #6e6e6e;" text="사진 불러오기" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="538.0" layoutY="157.0" onAction="#resizeImage" prefHeight="48.0" prefWidth="129.0" ripplerFill="WHITE" style="-fx-background-color: #6e6e6e;" text="사진 저장하기" textFill="WHITE" />
+      <Group fx:id="imageLayer" layoutX="22.0" layoutY="25.0" onDragDropped="#handleDrop" onDragOver="#handleDragOver">
+         <children>
+            <ImageView fx:id="imgview" fitHeight="548.0" fitWidth="499.0" pickOnBounds="true" preserveRatio="true">
+      </ImageView>
+            <HBox layoutX="454.0" layoutY="1.0" prefHeight="40.0" prefWidth="45.0" spacing="5.0">
+               <children>
+                  <JFXButton buttonType="RAISED" ellipsisString="" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE" style="-fx-background-color: #dddddd;" text=" " textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@crop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </Group>
+      <JFXRadioButton fx:id="profileradio" layoutX="521.0" layoutY="26.0" text="프로필 사진" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="imgtype" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="logoradio" layoutX="521.0" layoutY="55.0" text="기업 로고" textFill="WHITE" toggleGroup="$imgtype">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXTextArea fx:id="manualarea" layoutX="538.0" layoutY="320.0" maxWidth="371.0" minWidth="207.0" prefHeight="251.0" prefWidth="207.0" />
+      <Label layoutX="538.0" layoutY="284.0" prefHeight="27.0" prefWidth="57.0" text="사용법" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

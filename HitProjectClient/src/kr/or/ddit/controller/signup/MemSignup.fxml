@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ToggleGroup?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.signup.MemSignupController">
+   <children>
+      <ImageView fitHeight="506.0" fitWidth="515.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/signupBack.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSignUp" buttonType="RAISED" ellipsisString="" layoutX="114.0" layoutY="454.0" prefHeight="44.0" prefWidth="90.0" ripplerFill="#1a98ff" style="-fx-background-color: #3399ff;" text="SIGN UP" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <ScrollPane hbarPolicy="NEVER" layoutX="27.0" layoutY="63.0" prefHeight="374.0" prefWidth="428.0" vbarPolicy="ALWAYS">
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="681.0" prefWidth="420.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTextField fx:id="inputId" focusColor="#3399ff" labelFloat="true" layoutX="90.0" layoutY="51.0" maxWidth="210.0" minWidth="210.0" prefHeight="29.0" prefWidth="210.0" promptText="아이디" />
+                  <JFXTextField fx:id="inputPass" focusColor="#3399ff" labelFloat="true" layoutX="90.0" layoutY="126.0" maxWidth="210.0" minWidth="210.0" prefHeight="29.0" prefWidth="210.0" promptText="비밀번호" />
+                  <JFXTextField fx:id="inputCheckPass" focusColor="#3399ff" labelFloat="true" layoutX="90.0" layoutY="206.0" maxWidth="210.0" minWidth="210.0" prefHeight="29.0" prefWidth="210.0" promptText="비밀번호 재확인" />
+                  <JFXTextField fx:id="inputName" focusColor="#3399ff" labelFloat="true" layoutX="90.0" layoutY="284.0" maxWidth="210.0" minWidth="210.0" prefHeight="29.0" prefWidth="210.0" promptText="이름" />
+                  <JFXTextField fx:id="inputAddr" focusColor="#3399ff" labelFloat="true" layoutX="90.0" layoutY="501.0" maxWidth="287.0" minWidth="210.0" prefHeight="29.0" prefWidth="287.0" promptText="상세주소" />
+                  <JFXTextField fx:id="inputZip" focusColor="#3399ff" labelFloat="true" layoutX="90.0" layoutY="427.0" maxWidth="210.0" minWidth="210.0" prefHeight="29.0" prefWidth="210.0" promptText="우편번호" />
+                  <JFXButton fx:id="btnIdCheck" buttonType="RAISED" ellipsisString="" layoutX="300.0" layoutY="43.0" prefHeight="30.0" prefWidth="62.0" ripplerFill="#1a98ff" style="-fx-background-color: #3399ff;" text="Check" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="faillabel" layoutX="99.0" layoutY="81.0" prefHeight="19.0" prefWidth="161.0" textFill="RED" />
+                  <JFXButton fx:id="btnSearchZip" buttonType="RAISED" ellipsisString="" layoutX="300.0" layoutY="419.0" prefHeight="30.0" prefWidth="62.0" ripplerFill="#1a98ff" style="-fx-background-color: #3399ff;" text="주소" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="successlabel" layoutX="99.0" layoutY="81.0" prefHeight="19.0" prefWidth="161.0" textFill="#00ff24" />
+                  <JFXTextField fx:id="inputReg" focusColor="#3399ff" labelFloat="true" layoutX="90.0" layoutY="357.0" maxWidth="210.0" minWidth="210.0" prefHeight="29.0" prefWidth="210.0" promptText="주민등록번호" />
+                  <JFXTextField fx:id="inputEmail" focusColor="#3399ff" labelFloat="true" layoutX="90.0" layoutY="570.0" maxWidth="210.0" minWidth="210.0" prefHeight="29.0" prefWidth="210.0" promptText="Email" />
+                  <JFXTextField fx:id="inputTel" focusColor="#3399ff" labelFloat="true" layoutX="90.0" layoutY="633.0" maxWidth="210.0" minWidth="210.0" prefHeight="29.0" prefWidth="210.0" promptText="휴대폰번호" />
+                  <Label fx:id="checkId" layoutX="99.0" layoutY="83.0" prefHeight="15.0" prefWidth="259.0" />
+                  <Label fx:id="checkPw" layoutX="97.0" layoutY="235.0" prefHeight="15.0" prefWidth="265.0" />
+                  <Label fx:id="checkRegno" layoutX="97.0" layoutY="394.0" prefHeight="15.0" prefWidth="310.0" />
+                  <Label fx:id="checkEmail" layoutX="105.0" layoutY="602.0" prefHeight="15.0" prefWidth="294.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" ellipsisString="" layoutX="248.0" layoutY="454.0" prefHeight="44.0" prefWidth="90.0" ripplerFill="#1a98ff" style="-fx-background-color: #3399ff;" text="CANCEL" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="failsignup" layoutX="352.0" layoutY="469.0" prefHeight="15.0" prefWidth="119.0" textFill="RED" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="900.0" direction="TOP" prefHeight="93.0" prefWidth="479.0" />
+      <Label fx:id="pwCheck" layoutX="315.0" layoutY="274.0" prefHeight="15.0" prefWidth="82.0" />
+   </children>
+</Pane>

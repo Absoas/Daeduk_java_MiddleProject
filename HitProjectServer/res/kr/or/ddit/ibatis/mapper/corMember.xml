@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+         PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+         "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="corMember">
+   <select id="loginCheck"
+	resultClass="kr.or.ddit.cormem.CorMemberVO"
+	parameterClass="kr.or.ddit.cormem.CorMemberVO">
+	select a.*,c.* from itmember a, corpmember b,corperation c where
+	a.mem_id=b.cor_id and b.cor_regno = c.cor_no and a.mem_id=#mem_id# and
+	a.mem_pass=#mem_pass#
+</select>
+
+
+	<insert id="insertCorpSub"
+		parameterClass="kr.or.ddit.cormem.CorMemberVO">
+		insert into corpmember (cor_id, cor_regno, cor_state) values
+		(
+		#cor_id#,
+		#cor_regno#,
+		'F'
+		)
+	</insert>
+
+	<insert id="insertCorpMain"
+		parameterClass="kr.or.ddit.cormem.CorMemberVO">
+		insert into itmember
+		(mem_id,mem_pass,mem_name,mem_mail,mem_type)
+		values
+		(#mem_id#,#mem_pass#,#mem_name#,#mem_mail#,#mem_type#)
+	</insert>
+
+	<select id="chkIdMember"
+		resultClass="kr.or.ddit.jobmem.JobMemberVO" parameterClass="String">
+		select * from itmember where mem_id=#mem_id#
+	</select>
+
+	<select id="selectCorMemberInfo" resultClass="corMemberVO">
+		select a.*,b.cor_state,c.* from itmember a, corpmember b, corperation c
+		where a.mem_id=b.cor_id and b.cor_regno=c.cor_no
+	</select>
+
+	<update id="updateCorMember" parameterClass="corMemberVO">
+		update (select A.*,B.COR_REGNO,B.COR_STATE from itmember A, corpmember B
+		where A.MEM_ID=B.COR_ID) C
+		set
+		C.COR_STATE = #cor_state#
+		WHERE C.MEM_ID = #mem_id#
+	</update>
+
+	<delete id="deleteCorMember" parameterClass="String">
+		delete from corpmember where cor_id = #mem_id#
+	</delete>
+	
+	<delete id="deleteCorMember2" parameterClass="String">
+		delete from itmember where mem_id = #mem_id#
+	</delete>
+
+	<update id="updateMyInfo" parameterClass="corMemberVO">
+		update itmember set mem_pass = #mem_pass#, mem_name = #mem_name#, mem_mail =
+		#mem_mail# where mem_id = #mem_id#
+	</update>
+	
+	<select id= "selectCorConId" parameterClass="String" resultClass="corMemberVO">
+		select a.*,b.cor_state,c.*
+		from itmember a, corpmember b, corperation c
+		where a.mem_id=b.cor_id
+		and b.cor_regno=c.cor_no
+		and a.mem_id like '%'||#mem_id#||'%'
+	</select>
+	
+	<select id = "selectCorConSta" parameterClass="String" resultClass="corMemberVO">
+		select a.*,b.cor_state,c.*
+		from itmember a, corpmember b, corperation c
+		where a.mem_id=b.cor_id
+		and b.cor_regno=c.cor_no
+		and b.cor_state = #cor_state#
+	</select>
+	
+	<update id="updateProfileImg" parameterClass="corMemberVO" >
+		update itmember set mem_image=#mem_image# where mem_id=mem_id
+	</update>
+</sqlMap>         
+
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.passintroboard.passboardinsertController">
+   <children>
+      <JFXTextField fx:id = "title" layoutX="126.0" layoutY="63.0" maxWidth="430.0" minWidth="430.0" prefHeight="29.0" prefWidth="430.0" />
+      <JFXTextArea fx:id = "contents" layoutX="117.0" layoutY="129.0" maxWidth="439.0" minWidth="439.0" prefHeight="218.0" prefWidth="439.0" />
+      <Label layoutX="74.0" layoutY="70.0" text="제목:" />
+      <Label layoutX="74.0" layoutY="122.0" text="내용:" />
+      <JFXButton onAction = "#ok" fx:id = "ok" layoutX="216.0" layoutY="363.0" text="확인" />
+      <JFXButton onAction = "#cancel" fx:id = "cancel" layoutX="323.0" layoutY="363.0" text="취소" />
+   </children>
+</AnchorPane>

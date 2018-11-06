@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.passintroboard.passboardController">
+   <children>
+      <Pagination fx:id="paging" layoutX="25.0" layoutY="-1.0" prefHeight="493.0" prefWidth="864.0" />
+      <TableView fx:id="tableview" layoutX="30.0" layoutY="31.0" onMouseClicked="#tableviewSelect" prefHeight="416.0" prefWidth="855.0" stylesheets="@../../css/passintrotableview.css">
+        <columns>
+          <TableColumn fx:id="boardno" prefWidth="67.0" text="글번호" />
+          <TableColumn fx:id="title" prefWidth="455.0" text="제목" />
+            <TableColumn fx:id="writer" minWidth="0.0" prefWidth="103.0" text="글쓴이" />
+            <TableColumn fx:id="count" prefWidth="97.0" text="조회수" />
+            <TableColumn fx:id="date" prefWidth="132.0" text="날짜" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="insert" buttonType="RAISED" layoutX="824.0" layoutY="464.0" onAction="#insert" ripplerFill="WHITE" style="-fx-background-color: #3399ff;" text="새글작성" textFill="WHITE" />
+   </children>
+</AnchorPane>

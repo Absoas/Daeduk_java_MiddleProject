@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="jmemList">
+	<select id="selectJMemList" resultClass="kr.or.ddit.jmemlist.JMemListVO">
+		select A.MEM_ID,A.MEM_NAME,b.jMEM_TEL,A.MEM_IMAGE,a.MEM_MAIL,B.JMEM_ADDR,B.JMEM_REGNO,C.MY_CAREER,C.MY_HOPE,C.MY_INTRO,b.JMEM_CLICK
+		  FROM ITMEMBER A, JOBMEMBER B, MYINTRO C
+		  WHERE A.MEM_ID=B.JMEM_ID AND B.JMEM_ID=C.MY_ID AND B.JMEM_STATE='T'
+	</select>
+	
+	<update id="updateJMemList" parameterClass="kr.or.ddit.jmemlist.JMemListVO">
+		update jobmember set jmem_click = #jmem_click# where jmem_regno=#jmem_regno# 
+	</update>
+	
+	<select id="selectCareerJMemList" resultClass="kr.or.ddit.jmemlist.JMemListVO" parameterClass="String">
+			select A.MEM_ID,A.MEM_NAME,b.jMEM_TEL,A.MEM_IMAGE,a.MEM_MAIL,B.JMEM_ADDR,B.JMEM_REGNO,C.MY_CAREER,C.MY_HOPE,C.MY_INTRO,b.JMEM_CLICK
+		  FROM ITMEMBER A, JOBMEMBER B, MYINTRO C
+		  WHERE A.MEM_ID=B.JMEM_ID AND B.JMEM_ID=C.MY_ID AND B.JMEM_STATE='T' AND C.MY_CAREER = #MY_CAREER#
+	</select>
+	
+	<select id="selectDeptJMemList" resultClass="kr.or.ddit.jmemlist.JMemListVO" parameterClass="String">
+			select A.MEM_ID,A.MEM_NAME,b.jMEM_TEL,A.MEM_IMAGE,a.MEM_MAIL,B.JMEM_ADDR,B.JMEM_REGNO,C.MY_CAREER,C.MY_HOPE,C.MY_INTRO,b.JMEM_CLICK
+		  FROM ITMEMBER A, JOBMEMBER B, MYINTRO C
+		  WHERE A.MEM_ID=B.JMEM_ID AND B.JMEM_ID=C.MY_ID AND B.JMEM_STATE='T' AND c.MY_HOPE like #MY_HOPE#||'%'
+	</select>
+	
+	<select id="selectNameJMemList" resultClass="kr.or.ddit.jmemlist.JMemListVO" parameterClass="String">
+			select A.MEM_ID,A.MEM_NAME,b.jMEM_TEL,A.MEM_IMAGE,a.MEM_MAIL,B.JMEM_ADDR,B.JMEM_REGNO,C.MY_CAREER,C.MY_HOPE,C.MY_INTRO,b.JMEM_CLICK
+		  FROM ITMEMBER A, JOBMEMBER B, MYINTRO C
+		  WHERE A.MEM_ID=B.JMEM_ID AND B.JMEM_ID=C.MY_ID AND B.JMEM_STATE='T' AND a.mem_name = #mem_name#
+	</select>
+	
+</sqlMap>			
+
+
+
+
+

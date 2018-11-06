@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+         PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+         "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+         
+<sqlMap namespace="myApply">
+	
+	<select id="select" parameterClass="String"  resultClass="ApplyVO">
+	   select c.cor_name, c.cor_addr,d.test_name,a.res_state   from jobapply a, corpmember b, corperation c ,test d where jmem_id = #mem_id# and a.cor_id=b.cor_id and b.cor_regno = c.cor_no and d.test_no = a.test_no
+	</select>
+
+	<select id="selectTest_no" parameterClass="ApplyVO" resultClass="int">
+<!-- 	 select test_no from jobapply a, jobmember b,applycor c, correqboard d,  corpmember f , corperation g -->
+<!-- 			     where c.app_no = d.app_no and c.cor_id = a.cor_id and b.jmem_id = a.jmem_id and c.cor_id=f.cor_id and f.cor_regno = g.cor_no -->
+<!-- 			     and g.cor_name = #cor_name# and b.jmem_id =   #jmem_id# -->
+		 select c.test_no from applycor a, correqboard b,test c,corperation d ,corpmember e where d.cor_no = e.cor_regno and e.cor_id=a.cor_id and a.app_no = b.app_no and b.test_name = c.test_name and d.COR_NAME = #cor_name#
+	</select>
+	
+	<insert id="insertApply" parameterClass="ApplyVO">
+			insert into jobapply values(
+			    (select a.cor_id from corpmember a, corperation b 
+			      where a.cor_regno = b.cor_no
+			      and b.cor_name =  #cor_name#)
+			    , 
+			    #jmem_id#
+			    ,
+			   	#test_no#
+			    ,
+			    
+			    '심사중'
+			    ,
+			    
+			    #source#
+			)
+	</insert> 
+
+</sqlMap>

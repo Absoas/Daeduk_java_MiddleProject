@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.signup.ZipDrawerController">
+   <children>
+      <JFXTextField fx:id="menuTextField" focusColor="#3399ff" labelFloat="true" layoutX="194.0" layoutY="28.0" prefHeight="23.0" prefWidth="150.0" promptText="검색 내용 입력" />
+      <JFXButton fx:id="search" buttonType="RAISED" ellipsisString="" layoutX="362.0" layoutY="28.0" prefHeight="23.0" prefWidth="17.0" ripplerFill="WHITE" style="-fx-background-color: #3399ff;" text=" ">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/search.png" />
+               </image></ImageView>
+         </graphic>
+      </JFXButton>
+      <VBox layoutX="14.0" layoutY="65.0" prefHeight="382.0" prefWidth="427.0">
+         <children>
+            <JFXTreeTableView fx:id="zipTable" prefHeight="404.0" prefWidth="427.0" stylesheets="@../../css/table.css">
+               <columns>
+                  <TreeTableColumn fx:id="ZipCode" prefWidth="131.0" text="우편번호" />
+                  <TreeTableColumn fx:id="sido" prefWidth="94.0" text="시도" />
+                  <TreeTableColumn fx:id="gugun" prefWidth="91.0" text="구군" />
+                  <TreeTableColumn fx:id="gugun" prefWidth="119.0" text="동" />
+               </columns>
+            </JFXTreeTableView>
+         </children></VBox>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="269.0" layoutY="463.0" prefHeight="28.0" prefWidth="57.0" style="-fx-background-color: #3399ff;" text="취 소" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXComboBox fx:id="menuCombo" layoutX="54.0" layoutY="31.0" prefHeight="23.0" prefWidth="126.0" />
+      <JFXButton fx:id="btnCheck" buttonType="RAISED" layoutX="130.0" layoutY="463.0" prefHeight="28.0" prefWidth="57.0" style="-fx-background-color: #3399ff;" text="확 인" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

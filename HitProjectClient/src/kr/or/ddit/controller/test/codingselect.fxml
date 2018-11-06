@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.test.codingselectController">
+   <children>
+      <Label fx:id="label" layoutX="31.0" layoutY="136.0" text="문제이름:" />
+      <Label fx:id="label2" layoutX="53.0" layoutY="95.0" text="type:" />
+      <JFXTextField fx:id="testname" layoutX="99.0" layoutY="129.0" maxWidth="348.0" minWidth="324.0" prefHeight="29.0" prefWidth="348.0" />
+      <Label fx:id="label3" layoutX="31.0" layoutY="176.0" text="상세설명:" />
+      <JFXComboBox fx:id="testtype" layoutX="106.0" layoutY="88.0" prefHeight="23.0" prefWidth="94.0" />
+      <JFXTextArea fx:id="testexp" layoutX="31.0" layoutY="199.0" maxWidth="502.0" minWidth="502.0" prefHeight="289.0" prefWidth="502.0" />
+      <JFXButton fx:id="ok" layoutX="301.0" layoutY="512.0" onAction="#updateOk" text="수정완료" />
+      <JFXButton fx:id="delete" layoutX="418.0" layoutY="512.0" onAction="#delete" text="삭제" />
+      <JFXButton fx:id="update" layoutX="206.0" layoutY="512.0" onAction="#update" text="수정" />
+      <Label fx:id="label4" layoutX="53.0" layoutY="55.0" text="NO:" />
+      <JFXTextField fx:id="testno" layoutX="98.0" layoutY="44.0" maxWidth="108.0" minWidth="108.0" prefHeight="29.0" prefWidth="108.0" />
+      <JFXButton fx:id="close" layoutX="111.0" layoutY="512.0" onAction="#close" text="닫기" />
+   </children>
+</AnchorPane>

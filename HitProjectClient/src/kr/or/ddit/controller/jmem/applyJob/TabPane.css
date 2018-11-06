@@ -1,0 +1,53 @@
+#tabpane
+{
+	fx-tab-min-height : 5em;
+	-fx-tab-max-height : 5em;
+	-fx-tab-min-width : 8em;
+	-fx-tab-max-width : 8em;
+	/*-fx-padding : 0 -1 -1 0*/
+}
+.tab .tab_label
+{
+	-fx-background-color : transparent;
+	-fx-alignment : center;
+	-fx-text-fill:black;
+	-fx-font-family: "Nanum Barun Gothic";
+	src:"@../font/NanumBarunGothic.ttf";
+}
+
+.tab{
+	-fx-background-color : transparent;
+	-fx-background-insets:0.0;
+	-fx-background-radius:0.0;
+	-fx-padding:0 30 0 30;
+	-fx-border-width : 0 0 2 0;
+	-fx-border-color : #3399ff;
+}
+
+.tab:selected{
+	-fx-background-color : #3399ff;
+	-fx-background-radius : 0;
+	-fx-background-insets : 0;
+	-fx-border-width : 5 5 0 5;
+	-fx-border-color : #3399ff;
+}
+.tab:selected .tab_label{
+	-fx-font-family: "Nanum Barun Gothic";
+    src:"@../font/NanumBarunGothicBold.ttf";
+    -darkSide:#000000;
+    -fx-background-color: transparent;
+	-fx-text-fill:white;
+}
+
+.tab-pane .tab-headerbackground{
+	-fx-background-color : white;
+}
+
+.tab-pane:top .tab-header-area{
+	-fx-background-insets:0.0 0 10;
+	-fx-padding : 0.0em, 0.0em, 0.0em, 0.0em;
+}
+
+.tab:selected .focus-indicator{
+	-fx-border-color : transparent;
+}

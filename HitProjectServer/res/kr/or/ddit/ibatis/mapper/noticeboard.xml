@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="NoticeBoard">
+
+<insert id="insertBoard" parameterClass="NoticeBoardVO">
+	insert into noticeboard 
+	(noti_board_no, noti_board_title, noti_board_content, noti_board_date, noti_board_lookup, noti_board_writer)
+	values (noti_seq.nextval, #noti_board_title#, #noti_board_content#, sysdate, 0, '관리자')
+</insert>		
+
+<select id="selectBoard" resultClass="NoticeBoardVO">
+		select * from noticeboard order by noti_board_lookup desc
+</select>
+
+<update id="updateBoard" parameterClass="NoticeBoardVO">
+	update noticeboard set noti_board_title = #noti_board_title#, noti_board_content = #noti_board_content# where noti_board_no=#noti_board_no#
+</update>
+
+
+<delete id="deleteBoard" parameterClass="String">
+	delete from noticeboard where noti_board_no= #noti_board_no#
+</delete>
+
+
+<update id="lookBoard" parameterClass="NoticeBoardVO">
+	update noticeboard set noti_board_lookup = #noti_board_lookup# where noti_board_no = #noti_board_no#
+</update>
+
+</sqlMap>	
+
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="1079.0" style="-fx-background-color: #D1E0EF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.jmem.applyJob.coding.CodingController">
+   <children>
+      <AnchorPane fx:id="pane" layoutX="25.0" layoutY="46.0" prefHeight="398.0" prefWidth="1023.0" stylesheets="@java-keywords.css" />
+      <ImageView fitHeight="39.0" fitWidth="169.0" layoutX="25.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@exam.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="146.0" layoutX="25.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@consoleTab.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="resultText" layoutX="25.0" layoutY="489.0" prefHeight="155.0" prefWidth="1000.0" />
+      <HBox layoutX="181.0" layoutY="11.0" prefHeight="13.0" prefWidth="146.0">
+         <children>
+            <JFXButton fx:id="compile" buttonType="RAISED" ellipsisString="" prefHeight="25.0" prefWidth="45.0" ripplerFill="#3399ff">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                     <image>
+                        <Image url="@compileicon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="submit" buttonType="RAISED" ellipsisString="" prefHeight="45.0" prefWidth="46.0" ripplerFill="#3399ff">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@runicon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="reset" buttonType="RAISED" ellipsisString="" prefHeight="45.0" prefWidth="46.0" ripplerFill="#3399ff">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@creseticon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bdbfc2" height="4.0" layoutX="25.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: #bdbfc2;" width="1000.0" />
+      <JFXButton fx:id="finalSubmitBtn" buttonType="RAISED" layoutX="960.0" layoutY="658.0" prefHeight="35.0" prefWidth="65.0" ripplerFill="WHITE" style="-fx-background-color: #3399ff;" text="SUBMIT" textFill="WHITE" />
+      <TextArea fx:id="testconarea" layoutX="91.0" layoutY="648.0" prefHeight="55.0" prefWidth="845.0" style="-fx-border-color: #bdbfc2;" />
+      <Label layoutX="31.0" layoutY="650.0" text="문 제 :">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

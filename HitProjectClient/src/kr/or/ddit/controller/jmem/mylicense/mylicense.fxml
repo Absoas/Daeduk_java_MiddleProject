@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.jmem.mylicense.MyLicenseController">
+   <children>
+      <Pagination fx:id="paging" layoutX="45.0" layoutY="97.0" prefHeight="387.0" prefWidth="827.0" />
+      <TableView fx:id="tableview" layoutX="45.0" layoutY="97.0" prefHeight="344.0" prefWidth="827.0" stylesheets="@../../../css/passintrotableview.css">
+        <columns>
+          <TableColumn fx:id="memid" prefWidth="104.0" text="아이디" />
+          <TableColumn fx:id="lic_code" prefWidth="147.0" text="자격증고유번호" />
+            <TableColumn fx:id="lic_name" prefWidth="247.0" text="자격증이름" />
+            <TableColumn fx:id="lic_class" prefWidth="116.0" text="종류" />
+            <TableColumn fx:id="lic_jugwan" prefWidth="212.0" text="주관기관" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="selectlicname" layoutX="47.0" layoutY="57.0" prefHeight="23.0" prefWidth="197.0" />
+      <JFXButton fx:id="insertmylic" buttonType="RAISED" layoutX="258.0" layoutY="59.0" onAction="#insertmylic" ripplerFill="WHITE" style="-fx-background-color: #3399ff;" text="추가하기" textFill="WHITE" />
+      <JFXButton fx:id="deletemylic" buttonType="RAISED" layoutX="329.0" layoutY="59.0" onAction="#deletemylic" ripplerFill="WHITE" style="-fx-background-color: #3399ff;" text="삭 제" textFill="WHITE" />
+      <JFXButton fx:id="select" buttonType="RAISED" layoutX="805.0" layoutY="70.0" onAction="#selectbutton" ripplerFill="WHITE" style="-fx-background-color: #3399ff;" text="새로고침" textFill="WHITE" />
+   </children>
+</AnchorPane>

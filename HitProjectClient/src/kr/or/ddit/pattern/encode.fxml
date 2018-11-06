@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.pattern.encodeController">
+   <children>
+      <TextField fx:id="pass1" layoutX="160.0" layoutY="55.0" prefHeight="23.0" prefWidth="234.0" />
+      <TextField fx:id="pass2" layoutX="160.0" layoutY="141.0" prefHeight="23.0" prefWidth="234.0" />
+      <Button fx:id="encodebtn" layoutX="251.0" layoutY="98.0" mnemonicParsing="false" onAction="#encodebtn" text="암호화" />
+      <TextField fx:id="pass3" layoutX="160.0" layoutY="225.0" prefHeight="23.0" prefWidth="234.0" />
+      <Button fx:id="decodebtn" layoutX="251.0" layoutY="189.0" mnemonicParsing="false" onAction="#decodebtn" text="복호화" />
+   </children>
+</Pane>

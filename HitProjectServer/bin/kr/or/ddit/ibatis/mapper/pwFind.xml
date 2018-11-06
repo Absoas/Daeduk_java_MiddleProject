@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="FindPW">
+
+<select id="memFindPW" parameterClass="kr.or.ddit.jobmem.JobMemberVO" resultClass="String">
+
+	select mem_pass from itmember where mem_id=#mem_id# and mem_mail=#mem_mail#
+
+</select>
+
+
+<select id ="corFindPW" parameterClass="kr.or.ddit.cormem.CorMemberVO" resultClass="String">
+
+select a.mem_pass from itmember a, corpmember b where a.mem_id=b.cor_id and a.mem_mail = #mem_mail# and a.mem_id=#cor_id#
+
+</select>
+
+
+
+
+
+
+
+</sqlMap>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="747.0" style="-fx-background-color: #949494;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.login.LoginController">
+   <children>
+      <ImageView fitHeight="482.0" fitWidth="761.0" layoutX="-8.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/saramIT.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="540.0" layoutY="221.0" onAction="#selectSignupMenu" prefHeight="23.0" prefWidth="78.0" ripplerFill="GREY" text="회원가입" underline="true" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="textf_id" focusColor="GREY" labelFloat="true" layoutX="341.0" layoutY="98.0" maxWidth="227.0" minWidth="205.0" prefHeight="35.0" prefWidth="215.0" promptText="I D" unFocusColor="GREY">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="passf_pass" focusColor="GREY" labelFloat="true" layoutX="341.0" layoutY="163.0" maxWidth="227.0" minWidth="205.0" prefHeight="35.0" prefWidth="215.0" promptText="Password" unFocusColor="GREY">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="15.0" />
+         </font></JFXPasswordField>
+      <JFXButton buttonType="RAISED" ellipsisString="" layoutX="568.0" layoutY="114.0" onAction="#loginCheck" prefHeight="79.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #6E6E6E;" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="331.0" layoutY="217.0" onAction="#IdFind" prefHeight="35.0" prefWidth="98.0" ripplerFill="GREY" text="아이디 찾기" underline="true" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="422.0" layoutY="221.0" onAction="#PswFind" prefHeight="28.0" prefWidth="116.0" ripplerFill="GREY" text="비밀번호 찾기" underline="true" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTabPane fx:id="memTypePane" layoutX="350.0" layoutY="41.0" prefHeight="35.0" prefWidth="301.0" style="-fx-background-color: #6E6E6E;">
+         <tabs>
+            <Tab style="-fx-background-color: #6E6E6E;" text="구직회원">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="300.0" style="-fx-background-color: #6E6E6E;" />
+              </content>
+            </Tab>
+            <Tab style="-fx-background-color: #6E6E6E;" text="구인기업">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="300.0" />
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <Pane layoutX="518.0" layoutY="41.0" prefHeight="35.0" prefWidth="133.0" style="-fx-background-color: #6E6E6E;" />
+   </children>
+</Pane>

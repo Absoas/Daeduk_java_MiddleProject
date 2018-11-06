@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+         PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+         "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="jobMember">
+   <select id="loginCheck" resultClass="kr.or.ddit.jobmem.JobMemberVO" parameterClass="kr.or.ddit.jobmem.JobMemberVO">
+          select a.*,b.jmem_zip,b.jmem_addr,b.jmem_regno,b.jmem_state from itmember a, jobmember b where a.mem_id=b.jmem_id and a.mem_id=#mem_id# and a.mem_pass=#mem_pass#
+   </select>
+   
+<!--    <insert id ="insertMember" parameterClass="kr.or.ddit.jobmem.JobMemberVO">
+      insert into jobmember (
+         jmem_id,
+          jmem_zip,
+          jmem_addr,
+          jmem_regno,
+          jmem_state,
+          mem_id,
+          mem_pass,
+          mem_name,
+          mem_mail,
+          mem_type,
+          mem_image
+          ) values(
+          #jmem_id# ,
+         #jmem_zip#,
+          #jmem_addr#,
+          #jmem_regno#,
+          'F',
+          #mem_id# ,
+         #mem_pass#,
+          #mem_name#,
+          #mem_mail#,
+          1,
+          #mem_image#
+          
+          )
+   
+   </insert> -->
+   
+    <insert id="insertJobMember" parameterClass="kr.or.ddit.jobmem.JobMemberVO">
+       insert into jobmember(
+          jmem_id,
+          jmem_zip,
+          jmem_addr,
+          jmem_regno,
+          jmem_tel,
+          jmem_state,
+          jmem_click
+          
+       ) values
+       (
+         #jmem_id#,
+         #jmem_zip#,
+          #jmem_addr#,
+          #jmem_regno#,
+          #jmem_tel#,
+          'F',
+          0
+        )
+    </insert>
+    
+    <insert id="insertItMember" parameterClass="kr.or.ddit.jobmem.JobMemberVO">
+       insert into itmember(
+          mem_id,
+          mem_pass,
+          mem_name,
+          mem_mail,
+          mem_type,
+          mem_image
+       ) values
+       (
+         #mem_id# ,
+         #mem_pass#,
+          #mem_name#,
+          #mem_mail#,
+          1,
+          #mem_image#
+        )
+    </insert>
+
+     <select id="chkIdMember" resultClass="kr.or.ddit.jobmem.JobMemberVO" parameterClass="String">
+           select * from itmember where mem_id=#mem_id#
+     </select>
+     
+     
+   <select id="selectJobMemberInfo" resultClass="jobMemberVO">
+          select a.*,b.jmem_zip,b.jmem_addr,b.jmem_regno,b.jmem_state from itmember a, jobmember b where a.mem_id=b.jmem_id
+   </select>
+   
+   <update id="updateJobMember" parameterClass="jobMemberVO">
+      UPDATE (SELECT A.*, b.jmem_zip, b.jmem_addr, b.jmem_regno, b.jmem_state FROM itmember A, jobmember b WHERE A.mem_id=b.jmem_id) c
+      SET 
+         C.jmem_state = #jmem_state# 
+      WHERE C.MEM_ID = #mem_id#
+   </update>
+   
+    <delete id="deleteJobMember" parameterClass="String">
+      DELETE FROM jobmember WHERE jmem_id=#mem_id#
+    </delete>
+    
+    <delete id="deleteItMember" parameterClass="String">
+    	delete from itmember where mem_id = #mem_id#    
+    </delete>
+    
+    <update id = "updateMyInfoItmem" parameterClass="jobMemberVO">
+       update itmember set mem_pass = #mem_pass# where mem_id = #mem_id#
+    </update>
+    
+    <update id = "updateMyInfoJmem" parameterClass="jobMemberVO">
+       update jobmember set jmem_zip = #jmem_zip#, jmem_addr = #jmem_addr# ,jmem_state=#jmem_state# where jmem_id = #mem_id#
+    </update>
+    
+    <select id = "selectJobConId" parameterClass="String" resultClass="jobMemberVO">
+    	select a.*,b.jmem_zip,b.jmem_addr,b.jmem_regno,b.jmem_state
+    	from itmember a, jobmember b
+    	where a.mem_id=b.jmem_id
+    	and a.mem_id like '%'||#mem_id#||'%'
+    </select>
+    
+    <select id = "selectJobConSta" parameterClass="String" resultClass="jobMemberVO">
+    	select a.*,b.jmem_zip,b.jmem_addr,b.jmem_regno,b.jmem_state
+    	from itmember a, jobmember b
+    	where a.mem_id=b.jmem_id
+    	and b.jmem_state = #jmem_state#
+    </select>
+    
+    <select id = "selectJobConAddr" parameterClass="String" resultClass="jobMemberVO">
+    	select a.*,b.jmem_zip,b.jmem_addr,b.jmem_regno,b.jmem_state
+    	from itmember a, jobmember b
+    	where a.mem_id=b.jmem_id
+    	and b.jmem_addr like '%'||#jmem_addr#||'%'
+    </select>
+    
+    <update id="updateProfileImg" parameterClass="jobMemberVO">
+    	update itmember set mem_image = #mem_image# where mem_id=#mem_id#
+    </update>
+    
+    <select id="selectApplyMember" parameterClass="String" resultClass="jobMemberVO">
+    	select * from itmember a, jobmember b where a.mem_id = b.jmem_id and a.mem_name = #mem_name#
+    </select>
+</sqlMap>         
+
+
+
+

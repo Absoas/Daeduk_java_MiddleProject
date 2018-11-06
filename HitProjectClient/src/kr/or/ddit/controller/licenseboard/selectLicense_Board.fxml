@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane  fx:controller="kr.or.ddit.controller.licenseboard.LicenseBoardselectController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="152.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="자격증 분류 :" wrappingWidth="97.0" />
+      <JFXComboBox fx:id="select_class" layoutX="267.0" layoutY="207.0" prefHeight="29.0" prefWidth="153.0" />
+      <Text layoutX="201.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="code :" />
+      <Text layoutX="156.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="자격증 이름 :" />
+      <Text layoutX="125.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="자격증 발급기관 :" />
+      <JFXTextField fx:id="select_code" layoutX="258.0" layoutY="66.0" />
+      <JFXTextField fx:id="select_name" layoutX="258.0" layoutY="134.0" />
+      <JFXTextField fx:id="select_jugwan" layoutX="258.0" layoutY="275.0" />
+      <JFXButton fx:id="select_savbtn" layoutX="173.0" layoutY="340.0" prefHeight="29.0" prefWidth="50.0" style="-fx-background-color: #3399ff;" text="수정" textFill="WHITE" />
+      <JFXButton fx:id="select_canbtn" layoutX="405.0" layoutY="340.0" style="-fx-background-color: #3399ff;" text="취소" textFill="WHITE" />
+      <JFXButton fx:id="select_delbtn" layoutX="294.0" layoutY="340.0" prefHeight="29.0" prefWidth="50.0" style="-fx-background-color: #3399ff;" text="삭제" textFill="WHITE" />
+   </children>
+</AnchorPane>

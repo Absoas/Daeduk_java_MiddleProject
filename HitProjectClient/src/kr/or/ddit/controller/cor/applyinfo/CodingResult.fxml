@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane"
+	fx:controller="kr.or.ddit.controller.cor.applyinfo.CodingResultController"
+	maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+	minWidth="-Infinity" prefHeight="700.0" prefWidth="1045.0"
+	style="-fx-background-color: #D1E0EF;"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<TextArea fx:id="resultText" layoutX="33.0" layoutY="483.0"
+			prefHeight="91.0" prefWidth="1000.0" />
+		<TextArea fx:id="testcont" layoutX="33.0" layoutY="614.0"
+			prefHeight="72.0" prefWidth="809.0" />
+		<Label layoutX="33.0" layoutY="592.0" text="문 제" />
+		<JFXButton onAction="#close" buttonType="RAISED"
+			layoutX="941.0" layoutY="640.0" prefHeight="46.0" prefWidth="74.0"
+			ripplerFill="WHITE" style="-fx-background-color: #3399ff;" text="닫 기"
+			textFill="WHITE" />
+		
+		<ImageView fitHeight="32.0" fitWidth="107.0" layoutX="29.0"
+			layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@consoleTab.png" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="33.0" fitWidth="107.0" layoutX="28.0"
+			layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@exam.png" />
+			</image>
+		</ImageView>
+		
+		<JFXButton fx:id="compile" buttonType="RAISED"
+			layoutX="900" layoutY="600.0" prefHeight="28.0" prefWidth="55.0"
+			ripplerFill="WHITE" style="-fx-background-color: #3399ff;" text="컴파일"
+			textFill="WHITE" />
+		<JFXButton fx:id="submit" buttonType="RAISED"
+			layoutX="960.0" layoutY="600.0" prefHeight="28.0" prefWidth="55.0"
+			ripplerFill="WHITE" style="-fx-background-color: #3399ff;" text="결 과"
+			textFill="WHITE" />
+
+	</children>
+</AnchorPane>

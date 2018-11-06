@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="revboard">
+	<select id="selectAllBoard" resultClass="kr.or.ddit.revboard.RevBoardVO">
+	 		select * from reviewboard
+	 		
+	</select>
+	
+	<insert id="insertBoard" parameterClass="RevVO">
+		insert into reviewboard (
+ 			rev_board_no, rev_board_title, rev_board_writer, rev_board_contents, rev_board_date, rev_board_views
+ 		)
+		values(rev_board_no.nextval, #rev_board_title#, #rev_board_writer#, #rev_board_contents#, sysdate, 0)
+	</insert>
+	
+	<delete id="deleteBoard" parameterClass="int">
+		delete from reviewboard where rev_board_no = #rev_board_no#
+	</delete>
+	
+ 	<update id="updateBoard" parameterClass="RevVO">
+ 		update reviewboard set rev_board_title = #rev_board_title#, rev_board_writer = #rev_board_writer#, rev_board_contents = #rev_board_contents# where rev_board_no = #rev_board_no#
+ 	</update>
+ 	
+ 	
+ 	<update id="clickBoard" parameterClass="RevVO">
+ 		update reviewboard set rev_board_views = #rev_board_views# where rev_board_no = #rev_board_no#
+ 	</update>
+	 
+</sqlMap>			
+
+
+
+
+

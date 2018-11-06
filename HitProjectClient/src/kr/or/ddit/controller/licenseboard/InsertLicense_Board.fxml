@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.licenseboard.LicenseBoardInsertController">
+   <children>
+      <Text layoutX="152.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="자격증 분류 :" wrappingWidth="97.0" />
+      <Text layoutX="201.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="code :" />
+      <Text layoutX="156.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="자격증 이름 :" />
+      <Text layoutX="125.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="자격증 발급기관 :" />
+      <JFXTextField fx:id="licinsert_code" layoutX="258.0" layoutY="66.0" />
+      <JFXTextField fx:id="licinsert_name" layoutX="258.0" layoutY="134.0" />
+      <JFXTextField fx:id="licinsert_jugwan" layoutX="258.0" layoutY="275.0" />
+      <JFXButton fx:id="licinsert_savbtn" layoutX="173.0" layoutY="340.0" prefHeight="29.0" prefWidth="50.0" style="-fx-background-color: #3399ff;" text="저장" textFill="WHITE" />
+      <JFXButton fx:id="licinsert_canbtn" layoutX="370.0" layoutY="340.0" style="-fx-background-color: #3399ff;" text="취소" textFill="WHITE" />
+      <JFXComboBox fx:id="licinsert_class" layoutX="264.0" layoutY="207.0" prefHeight="29.0" prefWidth="157.0" />
+   </children>
+</AnchorPane>

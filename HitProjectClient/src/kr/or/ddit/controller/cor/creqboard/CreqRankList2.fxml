@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="213.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.cor.creqboard.CreqRankListController">
+   <children>
+      <VBox layoutX="2.0" layoutY="37.0" prefHeight="344.0" prefWidth="36.0">
+         <children>
+            <HBox prefHeight="35.0" prefWidth="25.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="25.0">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="32.0">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="21.0">
+               <children>
+                  <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="21.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../../../img/5.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="21.0">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/6.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="21.0">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/7.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="21.0">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/8.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="21.0">
+               <children>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/9.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="25.0">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="32.0">
+                     <image>
+                        <Image url="@../../../img/10.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="vbox" layoutX="42.0" layoutY="34.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="371.0" prefWidth="171.0">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#7f8183" height="86.3" radius="44.9825" width="95.63">
+               <input>
+                  <InnerShadow />
+               </input>
+            </DropShadow>
+         </effect></VBox>
+      <JFXButton fx:id="clear" layoutX="167.0" prefHeight="35.0" prefWidth="49.0">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#9e9c9c" height="11.67" radius="38.76499999999999" spread="0.32" width="145.39">
+               <input>
+                  <Bloom />
+               </input>
+            </DropShadow>
+         </effect>
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/new.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+   <effect>
+      <DropShadow color="#a4a4a4" />
+   </effect>
+</AnchorPane>

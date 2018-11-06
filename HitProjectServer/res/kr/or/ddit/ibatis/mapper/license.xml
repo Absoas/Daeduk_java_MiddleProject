@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="LicenseBoard">
+
+
+<insert id="insertBoard" parameterClass="LicenseBoardVO">
+	insert into license 
+	(lic_code, lic_name, lic_class, lic_jugwan)
+	values(license_seq.nextval, #lic_name#, #lic_class#, #lic_jugwan#)
+</insert>
+
+<select id="selectBoard" resultClass="LicenseBoardVO">
+	select * from license order by lic_class
+</select>
+
+<update id="updateBoard" parameterClass="LicenseBoardVO">
+	update license set lic_name = #lic_name#, lic_class = #lic_class#, lic_jugwan = #lic_jugwan# where lic_code = #lic_code#
+</update>
+
+<delete id="deleteBoard" parameterClass="String">
+	delete from license where lic_code = #lic_code#
+</delete>
+
+
+
+</sqlMap>

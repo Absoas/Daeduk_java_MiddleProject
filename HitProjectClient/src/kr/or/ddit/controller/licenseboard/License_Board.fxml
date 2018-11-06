@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.licenseboard.LicenseBoardController">
+   <children>
+      <Pagination fx:id="lic_board_paging" layoutX="17.0" layoutY="17.0" prefHeight="489.0" prefWidth="872.0" />
+      <TableView fx:id="license_tableView" layoutX="24.0" layoutY="23.0" prefHeight="418.0" prefWidth="853.0" stylesheets="@../../css/passintrotableview.css">
+        <columns>
+          <TableColumn fx:id="lic_code" prefWidth="101.0" text="자격증 코드" />
+          <TableColumn fx:id="lic_name" prefWidth="291.0" text="자격증 이름" />
+            <TableColumn fx:id="lic_class" prefWidth="259.0" text="자격증 분류" />
+            <TableColumn fx:id="lic_jugwan" prefWidth="201.0" text="자격증 발급기관" />
+        </columns>
+      </TableView>
+      <Button fx:id="lic_board_insertbtn" layoutX="839.0" layoutY="471.0" mnemonicParsing="false" onAction="#insertbtn" text="입력" />
+   </children>
+</AnchorPane>

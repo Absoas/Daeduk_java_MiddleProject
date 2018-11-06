@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="864.0" stylesheets="@../../css/Accordion.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.creq.CreqBoardController">
+   <children>
+      <ScrollPane fx:id="scroll" layoutX="196.0" layoutY="35.0" prefHeight="420" prefWidth="660.0">
+         <content>
+          <AnchorPane fx:id="parentPane" minHeight="0.0" minWidth="0.0" prefHeight="705.0" prefWidth="641.0"/>
+             
+         </content>
+      </ScrollPane>
+      <JFXComboBox fx:id="comboBox" layoutX="25.0" layoutY="61.0" prefHeight="37.0" prefWidth="153.0" />
+      <JFXTextField fx:id="textField" focusColor="#66a3ff" layoutX="16.0" layoutY="153.0" maxWidth="173.0" minWidth="153.0" prefHeight="35.0" prefWidth="173.0" />
+      <JFXButton fx:id="selBtn" layoutX="63.0" layoutY="231.0" prefHeight="29.0" prefWidth="75.0" style="-fx-background-color: #66a3ff;" text="검  색" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

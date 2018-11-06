@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.controller.cor.creqboard.CreqBoardInsertController">
+   <children>
+      <Label layoutX="94.0" layoutY="265.0" text="기타사항" />
+      <Label layoutX="59.0" layoutY="26.0" text="구인 시작 날짜" />
+      <Label layoutX="497.0" layoutY="26.0" text="구인 마감 날짜" />
+      <Label layoutX="119.0" layoutY="81.0" text="연봉" />
+      <Label layoutX="119.0" layoutY="145.0" text="경력" />
+      <DatePicker fx:id="startDate" layoutX="184.0" layoutY="21.0" />
+      <DatePicker fx:id="endDate" layoutX="618.0" layoutY="21.0" />
+      <JFXTextField fx:id="salaryField" layoutX="182.0" layoutY="73.0" maxWidth="98.0" minWidth="98.0" prefHeight="29.0" prefWidth="98.0" />
+      <Label layoutX="286.0" layoutY="81.0" text="(만원)" />
+      <JFXTextArea fx:id="contentArea" layoutX="183.0" layoutY="245.0" maxWidth="620.0" minWidth="304.0" prefHeight="147.0" prefWidth="620.0" />
+      <JFXButton fx:id="cancelBtn" buttonType="RAISED" layoutX="540.0" layoutY="408.0" prefHeight="49.0" prefWidth="82.0" style="-fx-background-color: #ff6666;" text="취  소" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="checkBtn" buttonType="RAISED" layoutX="286.0" layoutY="408.0" prefHeight="49.0" prefWidth="116.0" style="-fx-background-color: #66a3ff;" text="구인 신청" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="comboCareer" layoutX="182.0" layoutY="135.0" prefHeight="29.0" prefWidth="132.0" />
+      <JFXTextField fx:id="careerField" labelFloat="true" layoutX="332.0" layoutY="140.0" promptText="경력 입력(경력직만 입력가능)">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="92.0" layoutY="204.0" text="문제 선택" />
+      <JFXComboBox fx:id="examKindsCombo" layoutX="184.0" layoutY="193.0" prefHeight="42.0" prefWidth="138.0" promptText="문제 주제" />
+      <JFXComboBox fx:id="examSelectCombo" layoutX="343.0" layoutY="192.0" prefHeight="42.0" prefWidth="238.0" promptText="문제 선택" />
+   </children>
+</AnchorPane>

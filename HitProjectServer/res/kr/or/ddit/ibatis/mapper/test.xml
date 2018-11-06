@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+         PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+         "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="test">
+
+	<select id="selecttest"  resultClass="TestVO">
+	   select * from test 
+	</select>
+	
+	<select id="selecttype"  resultClass="TestVO" parameterClass = "int">
+	   select * from test where test_type = #test_type# 
+	</select>
+	
+	<insert id ="inserttest" parameterClass = "TestVO">
+		insert into test (test_no, test_name, test_type, test_content) values
+		(testno_seq.nextval, #test_name#, #test_type#, #test_content#)
+	</insert>
+	
+	<delete id = "deletetest" parameterClass = "int">
+		delete from test where test_no = #test_no#
+	</delete>
+	
+	<update id = "updatetest" parameterClass = "TestVO">
+		update test set test_name = #test_name#, test_content = #test_content# where test_no = #test_no#
+	</update>
+	
+	<select id="selectTestInfo" parameterClass = "int" resultClass="TestVO">
+		select * from test where test_no = #test_no#
+	</select>
+
+
+</sqlMap>

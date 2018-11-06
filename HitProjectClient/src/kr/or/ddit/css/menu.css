@@ -1,0 +1,30 @@
+.animated-option-button{
+	-fx-pref-width:80px;
+	-fx-pref-height:30px;
+	-fx-background-color:#44B449;
+	-fx-background-radius:10px;
+	-fx-text-fill:white;
+	-fx-border-color:#44B449;
+	-fx-border-radius:0px;
+	-fx-border-width:3px;
+	
+}
+
+.animated-option-sub-button{
+	-fx-background-color:#43609C;
+	-fx-border-color:#43609C;
+}
+
+.animated-option-sub-button2{
+	-fx-background-color:rgb(203,104,96);
+	-fx-border-color:rgb(203,104,96);
+}
+
+.animated-option-sub-button3{
+	-fx-background-color:#3399ff;
+	-fx-border-color:#3399ff;
+}
+
+.jfx-hamburger StackPane{
+	-fx-background-color : white;
+}
