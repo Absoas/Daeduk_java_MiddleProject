@@ -12,7 +12,7 @@ public class ServerMain{
 			IRemote inf= new RemoteImpl();
 			Registry reg=LocateRegistry.createRegistry(8887);
 			reg.rebind("HitServer",inf);
-			System.out.println("서버 Start");
+			System.out.println("서버 Start합니다.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
